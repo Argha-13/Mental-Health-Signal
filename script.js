@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "https://mental-health-signal-hj75.onrender.com";
+  const API_BASE = "https://mental-health-signal-hj75.onrender.com/";
 
   const form = document.getElementById("predict-form");
   const submitBtn = document.getElementById("submit-btn");
@@ -301,7 +301,7 @@
     showState("loading");
 
     try {
-      const res = await fetch(`${API_BASE}/predict`, {
+      const res = await fetch(`${API_BASE}predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
